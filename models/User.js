@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
+//const uniqueValidator = require('mongoose-unique-validator');
 
 
 const  Schema  = mongoose.Schema;
 
 const UserSchema = new Schema({
-    phoneNumber: {
+    phone: {
         type: String,
         require: true,
         unique: true,
@@ -17,6 +17,6 @@ const UserSchema = new Schema({
     }
 });
 
-UserSchema.plugin(uniqueValidator);
+//UserSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model('User', UserSchema);
